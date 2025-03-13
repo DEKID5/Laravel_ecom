@@ -1,0 +1,296 @@
+/* General Page Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    margin: 0;
+    background: #000; /* Ensures a fallback background */
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Dark Overlay to Improve Readability */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Header & Footer Border Animation */
+.animated-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border: 3px solid transparent;
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.animated-border::before,
+.animated-border::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid white;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    animation: border-animation 3s infinite linear;
+}
+
+.animated-border::after {
+    animation-delay: 1.5s;
+}
+
+@keyframes border-animation {
+    0% { clip-path: inset(0 100% 100% 0); }
+    25% { clip-path: inset(0 0 100% 0); }
+    50% { clip-path: inset(0 0 0 100%); }
+    75% { clip-path: inset(100% 0 0 0); }
+    100% { clip-path: inset(0 100% 100% 0); }
+}
+
+/* LOGIN PAGE STYLES */
+.container {
+    display: flex;
+    width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+/* Left Section (Welcome Text) */
+.left-section {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.left-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+}
+
+.left-section p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Right Section (Login Form) */
+.right-section {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+/* LOGIN Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+/* White Glow Effect for Login Inputs */
+input:focus {
+    border-bottom: 2px solid white;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff00ff, #ff0000);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff0000, #ff00ff);
+}
+
+/* Popup Styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Full-page overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup button:hover {
+    background-color: #218838;
+}
+
+/* SIGNUP PAGE STYLES */
+.signup-container {
+    width: 400px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Signup Heading */
+.signup-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.signup-container p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+/* SIGNUP Input Fields */
+.signup-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Signup Input Hover & Focus Effects */
+.signup-container input:focus {
+    border: 1px solid #ff00ff;
+    box-shadow: 0px 0px 6px rgba(255, 0, 255, 0.5);
+}
+
+/* Signup Submit Button */
+.signup-container button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff00ff, #ff0000);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.signup-container button:hover {
+    background: linear-gradient(90deg, #ff0000, #ff00ff);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: white;
+}
+
+.footer a {
+    color: #ff00ff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+    .left-section, .right-section {
+        width: 100%;
+        text-align: center;
+    }
+    .signup-container {
+        width: 90%;
+    }
+}
