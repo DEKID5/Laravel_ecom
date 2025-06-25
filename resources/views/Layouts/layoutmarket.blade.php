@@ -14,9 +14,6 @@
 
 <!-- Background Video
     
-       
-    
-
     <!-- Header -->
     <header class="animated-border">
         @yield('header')

@@ -8,8 +8,8 @@
 
     <!-- Buyer & Seller Selection Buttons -->
     <div class="user-type-buttons">
-        <button type="button" onclick="showForm('buyer')">Buyer</button>
-        <button type="button" onclick="showForm('seller')">Seller</button>
+        <button type="button" onclick="showForm('buyer')">CUSTOMER</button>
+        <button type="button" onclick="showForm('seller')">STORE</button>
     </div>
 
     <!-- Buyer Signup Form -->
@@ -27,7 +27,7 @@
         <label for="buyer-password">Password</label>
         <input type="password" id="buyer-password" name="password" placeholder="Enter your password" required>
 
-        <button type="submit">Sign Up as a Consumer</button>
+        <button type="submit">Sign Up as a Customer</button>
     </form>
 
     <!-- Seller Signup Form -->
@@ -55,11 +55,10 @@
     </form>
 </div>
 
-
-@if(session('success'))
-<div id="successPopup" class="popup">
-    <p>{{ session('success') }}</p>
-</div>
+@if (session('success'))
+    <script>
+        alert("{{ session('success') }}");
+    </script>
 @endif
 
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -15,7 +16,7 @@ class User extends Authenticatable
         'password',
         'location',
         'phone',
-        'store_name',
+        'store_name',  // Store name should be handled by the Store model, not directly in User
         'role',
     ];
 
@@ -23,4 +24,12 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    /**
+     * Get the store associated with the user.
+     */
+    public function store()
+    {
+        return $this->hasOne(Store::class);
+    }
 }

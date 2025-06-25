@@ -1,0 +1,108 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================
+ Container
+============================ */
+.container {
+  max-width: 600px;
+  background: #fff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ============================
+ Form Styling
+============================ */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* ============================
+ Image Preview
+============================ */
+img {
+  display: block;
+  margin-top: 10px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+/* ============================
+ Buttons
+============================ */
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+.btn-warning {
+  background: #ffc107;
+  color: #fff;
+}
+
+.btn-warning:hover {
+  background: #e0a800;
+}
+
+/* ============================
+ Alerts
+============================ */
+.alert {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.alert-danger {
+  background: #ffdddd;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+}
